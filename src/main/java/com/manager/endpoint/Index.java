@@ -7,7 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller("/")
 public class Index {
-
+    
+    
+    //../arquivo/download?nome=glosamax_2019-06-04.xml&data=2019-06-04
     @RequestMapping("/")
     public ModelAndView index() {
         ModelAndView mv = new ModelAndView("Index");
