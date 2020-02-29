@@ -51,6 +51,7 @@ public class BuscarXmlGuia {
                     guia.setNumeroProtocolo(eElement.getElementsByTagName("numero_protocolo").item(0).getTextContent());
                     guia.setMatricula(eElement.getElementsByTagName("matricula").item(0).getTextContent());
                     guia.setNome(eElement.getElementsByTagName("nome").item(0).getTextContent());
+                    guia.setNumeroGuia(eElement.getElementsByTagName("numero_guia").item(0).getTextContent());
                     guia.setNgPrest(eElement.getElementsByTagName("ng_prest").item(0).getTextContent());
                     guia.setSenhaGuia(eElement.getElementsByTagName("senha_guia").item(0).getTextContent());
                     guia.setCodigoProduto(eElement.getElementsByTagName("codigo_produto").item(0).getTextContent());
@@ -61,23 +62,7 @@ public class BuscarXmlGuia {
                     guia.setDescricaoMotivo(eElement.getElementsByTagName("descricao_motivo").item(0).getTextContent());
                     guia.setCodigoMotivo(eElement.getElementsByTagName("codigo_motivo").item(0).getTextContent());
                     listGuia.add(guia);
-                    //System.out.println("Employee id : " + eElement.getAttribute("id"));
-                    //System.out.println("First Name : " + eElement.getElementsByTagName("convenio").item(0).getTextContent());
-                    //System.out.println("Last Name : " + eElement.getElementsByTagName("data_pagamento").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("numero_protocolo").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("matricula").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("nome").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("ng_prest").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("senha_guia").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("codigo_produto").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("descricao_produto").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("valor_apresentado").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("valor_pago").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("valor_glosa").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("descricao_motivo").item(0).getTextContent());
-                    //System.out.println("Location : " + eElement.getElementsByTagName("codigo_motivo").item(0).getTextContent());
-                    //System.out.println("\n\n\n");
-
+                    
                 }
             }
         } catch(DOMException | IOException | ParserConfigurationException | SAXException | ParseException e) {
