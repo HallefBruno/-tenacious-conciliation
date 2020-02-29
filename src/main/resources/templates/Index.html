@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html >
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/stylesheet/manager.css}" rel="stylesheet" type="text/css"/>
+        
+    </head>
+    
+    <body>
+
+        <div th:replace="NavBar :: navbar"></div>
+        
+        
+        
+        <script th:src="@{/webjars/jquery/1.9.1/jquery.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+        <script th:src="@{/manager/index.js}" type="text/javascript"></script>
+        
+        
+    </body>
+</html>
