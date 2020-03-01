@@ -1,7 +1,8 @@
 package com.manager.service;
 
-import com.manager.entity.Guia;
-import com.manager.repository.IGuiaRepository;
+import com.manager.entity.convenio.Guia;
+import com.manager.repository.convenio.IGuiaRepository;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.transaction.Transactional;

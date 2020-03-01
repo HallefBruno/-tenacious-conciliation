@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Conciliação</title>
+<link th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
+	rel="stylesheet">
+</head>
+<body>
+	<div th:replace="NavBar :: navbar"></div>
+
+	<div class="container">
+		<div class="jumbotron">
+			<div style="padding-top: 30px; font-size: xx-small;" class="table-responsive">
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th style="width: 100px;">Convenio</th>
+							<th>Data Pagamento</th>
+							<th style="width: 100px;">Nome</th>
+							<th>Descricao Produto</th>
+							<th style="width: 100px;">Valor Apresentado</th>
+							<th style="width: 100px;">Valor Pago</th>
+							<th style="width: 100px;">Valor Glosa</th>
+							<th>Descrição Motivo</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr th:each="guia : ${listGuia}" style="background-color: white">
+							<td th:text="${guia.id}">1</td>
+							<td th:text="${guia.convenio}">1</td>
+							<td th:text="${#dates.format(guia.dataPagamento,'dd-MM-yyyy')}">1</td>
+							<td th:text="${guia.nome}">1</td>
+							<td th:text="${guia.descricaoProduto}">1</td>
+							<td th:text="${#numbers.formatCurrency(guia.valorApresentado)}">1</td>
+							<td th:text="${#numbers.formatCurrency(guia.valorPago)}">1</td>
+							<td th:text="${#numbers.formatCurrency(guia.valorGlosa)}">1</td>
+							<td th:text="${guia.descricaoMotivo}">1</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+			
+			<!-- tb ERP -->
+			
+			<p style="margin-top: 50px;" >Guia ERP</p>
+			
+			<div style="padding-top: 30px; font-size: xx-small;" class="table-responsive">
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+<!-- 							<th>Id</th> -->
+							<th>Convenio</th>
+							<th>Nome</th>
+							<th>N° Guia</th>
+							<th>Qtd Item</th>
+							<th>Nome Produto</th>
+							<th>Valor Item</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr th:each="guiaHospital : ${listGuiaHospital}" style="background-color: white">
+<!-- 							<td th:text="${guiaHospital.id}">1</td> -->
+							<td th:text="${guiaHospital.nomeConvenio}">1</td>
+							<td th:text="${guiaHospital.nome}">1</td>
+							<td th:text="${guiaHospital.numeroGuia}">1</td>
+							<td th:text="${guiaHospital.quantidadeItem}">1</td>
+							<td th:text="${guiaHospital.nomeProduto}">1</td>
+							<td th:text="${#numbers.formatCurrency(guiaHospital.valorItem)}">1</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+			
+			
+		</div>
+	</div>
+
+	<script th:src="@{/webjars/jquery/1.9.1/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+</body>
+</html>
